@@ -1,7 +1,7 @@
-package lab002;
+package lab04;
 
 
-public class BankAccount {
+public class bankaccount {
 	    private int balance = 1000;
 
 	    public synchronized void withdraw(int amount, String person) {
@@ -20,7 +20,7 @@ public class BankAccount {
 	    }
 
 	    public static void main(String[] args) {
-	        BankAccount account = new BankAccount();
+	        bankaccount account = new bankaccount();
 
 	        Thread person1 = new Thread(() -> {
 	            account.withdraw(700, "Person1");
@@ -33,4 +33,4 @@ public class BankAccount {
 	        person1.start();
 	        person2.start();
 	    }
-	}
+}
